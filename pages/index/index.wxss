@@ -1,0 +1,129 @@
+/**index.wxss**/
+.container{
+	background-color: #f1f5f8;
+}
+.main-box{
+	padding: 46rpx 30rpx;
+	margin-top: 30rpx;
+	background-color: #fff;
+}
+.main-container{
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 30rpx;
+	border-bottom: 1px solid #d9d9d9;
+}
+.main-phone{
+	color: #999;
+	font-size: 58rpx;
+	height: 60rpx;
+	margin-bottom: 30rpx;
+}
+.err-text{
+	font-size: 24rpx;
+	color: #ff4848;
+	margin-top: -25rpx;
+	margin-bottom: 10rpx;
+}
+.main-service{
+	font-size: 24rpx;
+	color: #449bff;
+}
+
+.flow-container{
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 30rpx 0 15rpx;
+}
+
+.flow-title{
+	color: #bebebe;
+	font-size: 24rpx;
+	margin-top: 30rpx;
+}
+
+.flow-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 210rpx;
+	height: 126rpx;
+	border: 1px solid #449bff;
+	border-radius: 10rpx;
+	color: #449bff;
+	margin-right: 30rpx;
+	margin-bottom: 20rpx;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.flow-item:nth-child(3n){
+	margin-right: 0;
+}
+.flow-fake-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 210rpx;
+	height: 126rpx;
+	border: 1px solid #bebebe;
+	border-radius: 10rpx;
+	color: #bebebe;
+	margin-right: 30rpx;
+	margin-bottom: 20rpx;
+	background-color: #fff;
+	box-sizing: border-box;
+    cursor: not-allowed;
+}
+.flow-fake-item:nth-child(3n){
+	margin-right: 0;
+}
+
+.item-flow{
+	display: block;
+	font-size: 38rpx;
+}
+
+.item-price{
+	display: block;
+	font-size: 20rpx;
+	margin-top: 4rpx;
+}
+
+.flow-active{
+	background-color: #449bff;
+	color: #fff;
+	border: none;
+}
+
+.link-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	color: #999;
+	font-size: 30rpx;
+	padding-top:150rpx;
+}
+
+.free-flow{
+	color: #449bff;
+	font-size: 27rpx;
+}
+.free-flow::after{
+	content: ' | ';
+}
+.charge-records{
+	color: #449bff;
+	font-size: 27rpx;
+}
+.free-active{
+	color: #83bdff;
+}
+.records-active{
+	color: #83bdff;
+}

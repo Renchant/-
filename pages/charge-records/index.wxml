@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+
+	<view class="avater-container">
+
+		<image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" class="avater"></image>
+		<view wx:else class="none-avater">头像</view>	
+
+	</view>
+
+	<scroll-view scroll-y="{{true}}" enable-back-to-top="{{true}}" scroll-top="{{100}}" bindscrolltolower="pullUpLoad" class="records-container">
+		
+		<!-- <image src=""></image> -->
+		<block wx:for="{{recordsList}}" wx:if="{{ recordsList.length > 0}}" wx:key="id">
+
+			<view class="item-container">
+				
+				<view class="services-box">
+					<image wx:if="{{item.serviceImg}}" src="{{item.serviceImg}}" class="service-img"></image>
+					<view class="services-name">{{item.serviceName}}</view>
+				</view>
+
+				<view class="message-box">
+					
+					<view class="message-main">充值{{item.flow}}到{{item.phone}}</view>
+					<view class="message-vice">{{item.create_time}}</view>
+					<view class="message-vice">订单号：{{item.code}}</view>
+
+				</view>
+
+				<view class="price-box">{{item.amount}}</view>
+
+			</view>	
+
+		</block>
+		<view class="decoration" wx:if="{{ recordsList.length > 0}}">加载完毕</view>
+
+		<view class="decoration" wx:if="{{ recordsList.length == 0 }}">暂无记录</view>
+
+	</scroll-view>
+
+
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/discovery/index",
+    "pages/personal/index",
+    "pages/charge-records/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#f1f5f8",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "流量用不完",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#ababab",
+    "selectedColor": "#449bff",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+       "pagePath": "pages/index/index",
+        "iconPath": "images/tab/charge-tab.png",
+        "selectedIconPath": "images/tab/charge-on.png",
+        "text": "充值"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "iconPath": "images/tab/personal-tab.png",
+        "selectedIconPath": "images/tab/personal-on.png",
+        "text": "我"
+      }
+    ]
+  }
+}

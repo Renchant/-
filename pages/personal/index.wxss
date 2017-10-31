@@ -1,0 +1,135 @@
+/**index.wxss**/
+
+.container{
+	background: #fff77b;
+	color: #333;
+}
+.avater-container{
+	display: flex;
+	align-items: center;
+	padding: 45rpx 0;
+	padding-left: 50rpx;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffda8b), to(#fff77b));
+	background: -moz-linear-gradient(top, #ffda8b, #fff77b);
+	background: linear-gradient(top,#fff77b,#ffda8b);
+	box-sizing: border-box;
+}
+.info-avater{
+	display: block;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	background: #d9d9d9;
+	border: 1px solid #d9d9d9;
+	box-sizing: border-box;
+}
+.none-avater{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	background: #d9d9d9;
+	border: 1px solid #d9d9d9;
+	box-sizing: border-box;
+}
+
+.info-nickName{
+	margin-left: 24rpx;
+	font-size: 30rpx;
+}
+
+.info-flow{
+	width:200rpx;
+	white-space:nowrap;
+	color:#fff;
+	border-radius:8rpx;
+	background-color: #03e59b;
+	height:50rpx;
+	line-height:50rpx;
+	text-align:center;
+}
+.bind-phone{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.no-bind{
+	display: inline-block;
+	white-space:nowrap;
+	color:#fff;
+	border-radius:8rpx;
+	background-color: #03e59b;
+	height:50rpx;
+	line-height:50rpx;
+	text-align:center;
+	padding: 10rpx;
+	margin-left: 10rpx;
+}
+.bing-active{
+	background-color: darken(#03e59b, 50%);
+}
+.phone-number{
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	margin-left: 10rpx;
+	margin-top: 4rpx;
+}
+.phone-service{
+	display: inline-block;
+}
+
+.function-container{
+	display: block;
+	padding: 0 50rpx;
+	position: relative;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	box-shadow:0 0 18rpx 0 rgba(0,0,0,.35);
+	background: #fff;
+	flex:1;
+}
+.item-container{
+	display: flex;
+	padding: 36rpx 0;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+	border-bottom: 1px solid #cdcdcd;
+	background: #fff;
+	border-radius: 0;
+}
+.item-container::after{
+	content: '';
+	display: block;
+	width: 35rpx;
+	height: 35rpx;
+	border: none;
+	border-top: 2px solid #cdcdcd;
+	border-right: 2px solid #cdcdcd;
+	border-radius: 2px;
+	position: absolute;
+	left: 620rpx;
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+}
+.item-coustom{
+	display: block;
+	width: 45rpx;
+	height: 45rpx;
+	border-radius: 50%;
+}
+.item-text{
+	margin-left: 10rpx;
+	font-size: 30rpx;
+}
+.bind-dialog{
+	width: 82%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}

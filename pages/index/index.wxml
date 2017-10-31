@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="container">
+
+	<view class="main-box">
+		
+		<view class="main-container"> 
+			<!-- <view >{{ phone }}</view> -->
+			<input class="main-phone" type="number" value="{{phone}}" placeholder="请输入手机号码" maxlength="{{11}}" bindinput="handleInput" bindconfirm="handleInputDone" bindblur="handleInputDone" bindfocus="getFocus" />
+			<view class="err-text" wx:if="{{showErrText}}">{{errText}}</view>
+			<view class="main-service" wx:if="{{service && !showErrText}}">{{service}}</view>
+		</view>
+
+		<view class="flow-title">全国流量，月底失效</view>
+		<view class="flow-container" wx:if="{{!showErrText && !showFakeFlow}}">
+
+			<block wx:for="{{flowList}}" wx:if="{{ flowList.length > 0}}" wx:key="id">
+
+				<view class="flow-item" hover-class="flow-active" data-id="{{item.id}}" bindtap="chargeFlow"> 
+
+					<view class="item-flow"> {{item.name}}</view>
+					<view class="item-price"> 售价{{item.amount}}元</view>
+
+				</view>
+
+			</block>
+		</view>
+
+		<view class="flow-container" hidden="{{!showFakeFlow}}">
+			<block wx:for="{{fakeFlowList}}" wx:key="id">
+				<view class="flow-fake-item"> 
+
+					<view class="item-flow"> {{item.name}}</view>
+					<view class="item-price"> {{item.amount}}</view>
+
+				</view>
+			</block>
+
+		</view>
+
+	</view>
+	<view class="link-container">
+		
+		<!-- <view class="free-flow" hover-class="free-active" bindtap="getFreeFlow">获取免费流量</view> -->
+		<navigator url="/pages/charge-records/index" open-type="navigate" class="charge-records" hover-class="records-active">充值记录</navigator>
+
+	</view>
+
+</view>

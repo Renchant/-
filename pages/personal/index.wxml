@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+
+
+	<view class="avater-container">
+		<image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" class="info-avater"></image>
+		<view wx:else class="none-avater">头像</view>
+		<view class="info-nickName">{{userInfo.nickName}}</view>
+		<view class="info-flow" wx:if="{{false}}">
+			流量{{flow}}M
+		</view>		
+	</view>
+
+
+	<view class="function-container">
+		
+		<view class="bind-phone" wx:if="{{false}}">
+			我的手机号 : 
+			<view class="no-bind" hover-class="bing-active" wx:if="{{!phone}}" bindtap="bindPhone">点击绑定</view>
+			<view class="phone-number" selectable="{{true}}" wx:else> {{phone}}
+				<view class="phone-service">{{service}}</view>
+			</view>
+		</view>
+
+		<button open-type="contact" class="item-container" bindcontact="linkCoustom">
+			
+			<image src="{{coustomImg}}" class="item-coustom"></image>
+			<view class="item-text">联系客服</view>
+
+		</button>
+
+	</view>
+
+	<view class="bind-dialog" wx:if="{{showDialog}}">
+			
+	</view>
+
+</view>
